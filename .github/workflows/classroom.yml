@@ -1,0 +1,15 @@
+name: Classroom Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Classroom workflow is running correctly!"
